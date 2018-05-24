@@ -7,6 +7,7 @@ use App\Post;
 
 class ApiController extends Controller
 {
+
     /**
      * Display our Vue js landing Page.
      *

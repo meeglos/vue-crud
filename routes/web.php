@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', 'ApiController@home');
+Route::get('/', 'ApiController@home')->middleware('auth');
 
 Route::resource('/api', 'ApiController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

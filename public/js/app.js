@@ -13995,6 +13995,7 @@ module.exports = __webpack_require__(65);
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+/* Vue.config.silent = false */
 
 __webpack_require__(15);
 
