@@ -50641,7 +50641,7 @@ var render = function() {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-xs",
+                    staticClass: "btn btn-warning btn-sm",
                     attrs: { to: { name: "Editpost", params: { id: post.id } } }
                   },
                   [_vm._v("Edit")]
@@ -50650,7 +50650,7 @@ var render = function() {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-danger btn-xs",
+                    staticClass: "btn btn-danger btn-sm",
                     attrs: {
                       to: { name: "Deletepost", params: { id: post.id } }
                     }
@@ -50772,7 +50772,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         createPost: function createPost() {
             var _this = this;
 
-            var uri = 'http://vue-crud.local/api/';
+            var uri = 'http://vue-crud.local/api';
             Axios.post(uri, this.post).then(function (response) {
                 _this.$router.push({ name: 'Listposts' });
             });
@@ -50961,7 +50961,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     created: function created() {
         var _this = this;
 
-        var uri = 'http://127.0.0.1:8000/api/' + this.$route.params.id + '/edit';
+        var uri = 'http://vue-crud.local/api/' + this.$route.params.id + '/edit';
         Axios.get(uri).then(function (response) {
             _this.post = response.data;
         });
@@ -50970,7 +50970,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         updatePost: function updatePost() {
             var _this2 = this;
 
-            var uri = 'http://127.0.0.1:8000/api/' + this.$route.params.id;
+            var uri = 'http://vue-crud.local/api/' + this.$route.params.id;
+            console.log(this.post.description);
             Axios.patch(uri, this.post).then(function (response) {
                 _this2.$router.push({ name: 'Listposts' });
             });
@@ -51322,7 +51323,7 @@ var render = function() {
         attrs: { "aria-hidden": "true" }
       }),
       _vm._v(" "),
-      _c("router-link", { attrs: { to: "/" } }, [_vm._v("Back Post list")])
+      _c("router-link", { attrs: { to: "/" } }, [_vm._v("Back to Post list")])
     ],
     1
   )

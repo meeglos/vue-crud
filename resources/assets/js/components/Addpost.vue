@@ -24,7 +24,7 @@ export default {
     },
     methods: {
         createPost: function() {
-            let uri = 'http://vue-crud.local/api/';
+            let uri = 'http://vue-crud.local/api';
             Axios.post(uri, this.post).then((response) => {
                 this.$router.push({name: 'Listposts'})
             })

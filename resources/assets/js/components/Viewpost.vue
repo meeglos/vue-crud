@@ -5,7 +5,7 @@
         <div>{{ post.description }}</div>
         <br/>
         <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-        <router-link v-bind:to="'/'">Back Post list</router-link>
+        <router-link v-bind:to="'/'">Back to Post list</router-link>
     </div>
 </template>
 

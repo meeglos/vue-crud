@@ -27,8 +27,6 @@ class ApiController extends Controller
         return Post::orderBy('id', 'DESC')->get();
     }
 
-
-
     /**
      * Store a newly created resource in storage.
      *

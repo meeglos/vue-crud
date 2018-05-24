@@ -22,16 +22,17 @@ export default {
         return {post: {name: '', description: ''}}
     },
     created: function(){
-        let uri = 'http://127.0.0.1:8000/api/' + this.$route.params.id + '/edit';
+        let uri = 'http://vue-crud.local/api/' + this.$route.params.id + '/edit';
         Axios.get(uri).then((response) => {
             this.post = response.data;
         });
     },
     methods: {
         updatePost: function() {
-                let uri = 'http://127.0.0.1:8000/api/' + this.$route.params.id;
-                Axios.patch(uri, this.post).then((response) => {
-                    this.$router.push({name: 'Listposts'})
+            let uri = 'http://vue-crud.local/api/' + this.$route.params.id;
+            console.log(this.post.description);
+            Axios.patch(uri, this.post).then((response) => {
+                this.$router.push({name: 'Listposts'})
             })
         }
     }

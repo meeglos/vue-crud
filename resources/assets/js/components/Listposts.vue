@@ -27,8 +27,8 @@
                     </td>
                     <td>{{ post.description }}</td>
                     <td>
-                        <router-link class="btn btn-warning btn-xs" v-bind:to="{name: 'Editpost', params: {id: post.id}}">Edit</router-link>
-                        <router-link class="btn btn-danger btn-xs" v-bind:to="{name: 'Deletepost', params: {id: post.id}}">Delete</router-link>
+                        <router-link class="btn btn-warning btn-sm" v-bind:to="{name: 'Editpost', params: {id: post.id}}">Edit</router-link>
+                        <router-link class="btn btn-danger btn-sm" v-bind:to="{name: 'Deletepost', params: {id: post.id}}">Delete</router-link>
                     </td>
                 </tr>
             </tbody>
